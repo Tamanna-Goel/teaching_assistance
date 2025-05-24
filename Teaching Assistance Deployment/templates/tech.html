@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Attribute Prediction</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Class Attribute Prediction</h2>
+        <form action="/predict" method="POST">
+            <div class="form-group">
+                <label for="Native_teacher">Native Teacher:</label>
+                <input type="number" class="form-control" id="Native_teacher" name="Native_teacher" required>
+            </div>
+            <div class="form-group">
+                <label for="Instructor">Instructor:</label>
+                <input type="number" class="form-control" id="Instructor" name="Instructor" required>
+            </div>
+            <div class="form-group">
+                <label for="Course">Course:</label>
+                <input type="number" class="form-control" id="Course" name="Course" required>
+            </div>
+            <div class="form-group">
+                <label for="Semester">Semester:</label>
+                <input type="number" class="form-control" id="Semester" name="Semester" required>
+            </div>
+            <div class="form-group">
+                <label for="Class_size">Class Size:</label>
+                <input type="number" class="form-control" id="Class_size" name="Class_size" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Predict</button>
+        </form>
+
+        {% if prediction_text %}
+            <div class="mt-4 alert alert-info">
+                <h4>Prediction Result:</h4>
+                <p>{{ prediction_text }}</p>
+            </div>
+        {% endif %}
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
