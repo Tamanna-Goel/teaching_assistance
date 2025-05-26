@@ -1,10 +1,10 @@
 🧑‍🏫 Teaching Assistant Performance Evaluation
 
-🔧 Tools: Python, SMOTE, Scikit-learn
+    - Tools: Python, SMOTE, Scikit-learn
 
-🧠 Model: Random Forest Classifier
+    - Model: Random Forest Classifier
 
-🎯 Accuracy: 74%
+    - Accuracy: 74%
 
 Challenges and Risks
  - Categorical Data Transformation: Applied label encoding for the target variable and one-hot encoding for categorical features like Instructor and Course.
